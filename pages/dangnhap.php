@@ -25,7 +25,12 @@ if (isset($_POST["btn_submit"])) {
         echo "<p>Username hoặc password bạn không được để trống!</p>";
     } else {
         // ✅ Kết nối MySQL
-        $conn = mysqli_connect("datashop.mysql.database.azure.com", "sqladmin", "phong218.", "dacs2");
+        $servername = "datashop.mysql.database.azure.com";
+$username = "sqladmin@datashop";
+$password = "phong218.";
+$dbname = "dacs2";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
         // ✅ Kiểm tra kết nối
         if (!$conn) {
