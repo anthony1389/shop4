@@ -42,7 +42,6 @@ session_start();
 				
                 // Thực thi hành động sau khi lưu thông tin vào session
                 // ở đây tiến hành chuyển hướng trang web tới một trang gọi là index.php
-				mysqli_close($conn);
                	header('Location: ../index.php');
 				exit();
 			}
