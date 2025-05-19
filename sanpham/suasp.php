@@ -135,7 +135,8 @@ if (isset($_POST['submit'])) {
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn = mysqli_connect("localhost", "root", "", "dacs2");
+										include("ketnoi.php");
+										$conn3 = $conn;
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
 										while($row=mysqli_fetch_array($ketqua)){
@@ -199,7 +200,8 @@ if (isset($_POST['submit'])) {
  
                 
  <?php
-       $conn2 = mysqli_connect("localhost", "root", "", "dacs2");
+      include("ketnoi.php");
+										$conn2 = $conn;
        $sql2 = "SELECT * FROM sanpham where id=".$_GET['id'];
        $ketqua = mysqli_query($conn2, $sql2);
        $row = mysqli_fetch_array($ketqua);
