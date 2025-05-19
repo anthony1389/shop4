@@ -105,7 +105,8 @@ if (!isset($_SESSION['username'])) {
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
+
 										$conn3 = $conn;
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
@@ -266,7 +267,8 @@ if (!isset($_SESSION['username'])) {
     <tbody>
 		<?php
 			
-			include("ketnoi.php");
+			include("../ketnoi.php");
+
 			$conn3 = $conn;
 			$sql= "SELECT * FROM taikhoan ";
 			$ketqua = mysqli_query($conn, $sql);
