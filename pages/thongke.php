@@ -100,7 +100,7 @@ session_start();
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
 										$conn3 = $conn;
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
@@ -195,7 +195,7 @@ session_start();
 <tbody>
 <?php
 	
-	include("ketnoi.php");
+	include("../ketnoi.php");
 										$conn3 = $conn;
 	$sql= "SELECT * FROM thongke ";
 	$ketqua = mysqli_query($conn, $sql);
