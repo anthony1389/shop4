@@ -1,5 +1,6 @@
 <?php	
-		include("ketnoi.php");
+		include("../ketnoi.php");
+
 		session_start();
 		$id = $_GET['id'];
 		$conn3 = $conn;
