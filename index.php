@@ -105,7 +105,8 @@ if (!isset($_SESSION['username'])) {
 							<li class="navbar-category-item">
 							<?php
 										 // ✅ Kết nối MySQL
-include("ketnoi.php");
+include("../ketnoi.php");
+
 										$conn3 = $conn;
 
 										$sql3 = "SELECT * From danhmuc";
@@ -123,7 +124,8 @@ include("ketnoi.php");
 							<li class="navbar-category-item">
 							<?php
 										 // ✅ Kết nối MySQL
-include("ketnoi.php");
+include("../ketnoi.php");
+
 										$conn3 = $conn;
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
@@ -212,7 +214,8 @@ include("ketnoi.php");
 									
 									<?php
 										 // ✅ Kết nối MySQL
-include("ketnoi.php");
+include("../ketnoi.php");
+
 										$conn3 = $conn;
 
 										$sql = "SELECT * From danhmuc";
@@ -255,7 +258,8 @@ include("ketnoi.php");
         // PHẦN XỬ LÝ PHP
         // BƯỚC 1: KẾT NỐI CSDL
          // ✅ Kết nối MySQL
-include("ketnoi.php");
+include("../ketnoi.php");
+
 										$conn3 = $conn;
 
         // BƯỚC 2: TÌM TỔNG SỐ RECORDS
