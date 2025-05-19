@@ -2,7 +2,7 @@
 $servername = "datashop.mysql.database.azure.com";
 $username = "sqladmin";
 $password = "phong218.";
-$dbname = "ban_hang";
+$dbname = "dacs2";
 
 // Tạo kết nối
 $conn = new mysqli($servername, $username, $password, $dbname);
