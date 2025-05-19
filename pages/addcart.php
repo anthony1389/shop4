@@ -10,7 +10,8 @@
 </head>
 <body>
 <?php
-        $conn = mysqli_connect("localhost", "root", "", "dacs2");
+        include("ketnoi.php");
+										$conn3 = $conn;
         $sql ="select * from sanpham ";
         $query=mysqli_query($conn,$sql);
         $id=$_GET['item'];
