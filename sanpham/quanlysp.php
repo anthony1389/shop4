@@ -162,8 +162,7 @@ if (!isset($_SESSION['username'])) {
         // PHẦN XỬ LÝ PHP
         // BƯỚC 1: KẾT NỐI CSDL
         include("ketnoi.php");
-	zinclude("ketnoi.php");
-										$conn3 = $conn;$conn3 = $conn;
+	$conn3 = $conn;
  
         // BƯỚC 2: TÌM TỔNG SỐ RECORDS
         $result = mysqli_query($conn, 'select count(id) as total from sanpham');
