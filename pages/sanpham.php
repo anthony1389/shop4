@@ -5,7 +5,8 @@ if (!isset($_SESSION['username'])) {
 ?><?php
     
     $id = $_GET['id'];
-    $conn =	mysqli_connect("localhost", "root", "", "dacs2");
+   include("ketnoi.php");
+	$conn3 = $conn;
     $sql= "SELECT * FROM sanpham where id = $id";
     $ketqua = mysqli_query($conn, $sql);
 ?>
@@ -121,7 +122,8 @@ if (!isset($_SESSION['username'])) {
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn3 = mysqli_connect("localhost", "root", "", "dacs2");
+										include("ketnoi.php");
+										$conn3 = $conn;
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
 										while($row3=mysqli_fetch_array($ketqua3)){
@@ -136,7 +138,8 @@ if (!isset($_SESSION['username'])) {
 							<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn3 = mysqli_connect("localhost", "root", "", "dacs2");
+										include("ketnoi.php");
+										$conn3 = $conn;
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
 										while($row3=mysqli_fetch_array($ketqua3)){
@@ -336,7 +339,8 @@ if (!isset($_SESSION['username'])) {
 						<div class="product-detail-appreciation-content-row">
 							<div id="dsbinhluan">
 				<?php
-            $conn7 = mysqli_connect("localhost", "root", "", "dacs2");
+            include("ketnoi.php");
+										$conn7 = $conn;
             $sql7 ="SELECT * FROM binhluan WHERE idsp=".$_GET['id'];
             $ketqua7 = mysqli_query($conn7,$sql7);
             while($row7=mysqli_fetch_array($ketqua7)){
@@ -383,7 +387,8 @@ if (!isset($_SESSION['username'])) {
 	<?php 
         // PHẦN XỬ LÝ PHP
         // BƯỚC 1: KẾT NỐI CSDL
-        $conn = mysqli_connect('localhost', 'root', '', 'dacs2');
+        $include("ketnoi.php");
+		$conn3 = $conn;
  
         // BƯỚC 2: TÌM TỔNG SỐ RECORDS
         $result = mysqli_query($conn, 'select count(id) as total from sanpham');
