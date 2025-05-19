@@ -1,7 +1,9 @@
 <?php
 		session_start();
+include("ketnoi.php");
+										$conn3 = $conn;
 		$id = $_GET['id'];
-		$conn =	mysqli_connect("localhost", "root", "", "dacs2");
+
 		$sql= "DELETE FROM chitietdonhang where id=$id ";
 		$ketqua = mysqli_query($conn, $sql);
 		header("location: ../chitietdonhang/quanlyctdh.php");
