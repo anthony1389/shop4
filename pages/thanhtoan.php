@@ -159,7 +159,8 @@ session_start();
     <?php
         $ngaymua = date('Y-m-d');
 
-        $conn = mysqli_connect("localhost", "root", "", "dacs2");
+include("ketnoi.php");
+	$conn3 = $conn;
         $sql ="INSERT INTO donhang(iduser,tongtien,trangthai,ngaymua,diachi) VALUES( $_SESSION[id], $_SESSION[total], 'Đã thanh toán','$ngaymua','$_SESSION[diachi]')";
         $ketqua=mysqli_query($conn,$sql);
         $id =  mysqli_insert_id($conn);
