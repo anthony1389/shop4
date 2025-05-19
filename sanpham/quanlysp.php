@@ -105,7 +105,8 @@ if (!isset($_SESSION['username'])) {
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn = mysqli_connect("localhost", "root", "", "dacs2");
+										include("ketnoi.php");
+										$conn3 = $conn;
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
 										while($row=mysqli_fetch_array($ketqua)){
@@ -160,7 +161,9 @@ if (!isset($_SESSION['username'])) {
 						<?php 
         // PHẦN XỬ LÝ PHP
         // BƯỚC 1: KẾT NỐI CSDL
-        $conn = mysqli_connect('localhost', 'root', '', 'dacs2');
+        include("ketnoi.php");
+	zinclude("ketnoi.php");
+										$conn3 = $conn;$conn3 = $conn;
  
         // BƯỚC 2: TÌM TỔNG SỐ RECORDS
         $result = mysqli_query($conn, 'select count(id) as total from sanpham');
