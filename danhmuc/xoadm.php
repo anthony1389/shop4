@@ -1,6 +1,6 @@
 <?php
 		session_start();
-include("ketnoi.php");
+include("../ketnoi.php");
 										$conn3 = $conn;
 		$id = $_GET['id'];
 		$sql= "DELETE FROM danhmuc where id=$id ";
