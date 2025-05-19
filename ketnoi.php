@@ -4,6 +4,7 @@ $username = "sqladmin";
 $password = "phong218.";
 $dbname = "dacs2";
 
+$ssl_ca = __DIR__ . "/cert/BaltimoreCyberTrustRoot.crt.pem";
 // Tạo kết nối
 $conn = new mysqli($servername, $username, $password, $dbname);
 
