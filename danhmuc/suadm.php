@@ -1,11 +1,10 @@
 <?php
 session_start();
+include("ketnoi.php");
+	$conn3 = $conn;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$tendanhmuc = $_POST['tendanhmuc'];
-
-
-	$conn =	mysqli_connect("localhost", "root", "", "dacs2");
 	$sql = "UPDATE danhmuc SET tendanhmuc='$tendanhmuc' WHERE id=".$_GET['id'];
 	$ketqua = mysqli_query($conn, $sql);
 	mysqli_close($conn);
@@ -113,7 +112,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn = mysqli_connect("localhost", "root", "", "dacs2");
+										include("ketnoi.php");
+										$conn3 = $conn;
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
 										while($row=mysqli_fetch_array($ketqua)){
