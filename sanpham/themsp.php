@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-$connect = mysqli_connect("localhost","root","","dacs2") or die('Not connect');
+include("ketnoi.php");
+										$conn3 = $conn;
 date_default_timezone_set("Asia/Bangkok"); // Thiết lập múi giờ chuẩn
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if (isset($_POST['submit'])) {
@@ -27,8 +28,8 @@ if (isset($_POST['submit'])) {
   $mota = $_POST['mota'];
   $soluong = $_POST['soluong'];
   $iddanhmuc = $_POST['iddanhmuc'];
-
-  $conn =	mysqli_connect("localhost", "root", "", "dacs2");
+include("ketnoi.php");
+										$conn3 = $conn;
   $sql= "INSERT INTO sanpham (tensp, giasp, mota,hinhanh,soluong,iddanhmuc) VALUES ('$tensp',  $giasp, '$mota','$hinhanh',$soluong,$iddanhmuc)";
   $ketqua = mysqli_query($conn, $sql);
   }}
@@ -137,7 +138,8 @@ if (isset($_POST['submit'])) {
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn = mysqli_connect("localhost", "root", "", "dacs2");
+										include("ketnoi.php");
+										$conn3 = $conn;
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
 										while($row=mysqli_fetch_array($ketqua)){
@@ -227,7 +229,8 @@ if (isset($_POST['submit'])) {
     <td>
   <select name="iddanhmuc">
 			<?php 
-				$conn2 =	mysqli_connect("localhost", "root", "", "dacs2");
+				include("ketnoi.php");
+										$conn2 = $conn;
 				$sql2= "SELECT * FROM danhmuc";
 				$ketqua2 = mysqli_query($conn2, $sql2);
 				while($row2 = mysqli_fetch_array($ketqua2))
