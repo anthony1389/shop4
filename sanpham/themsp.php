@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("ketnoi.php");
+include("../ketnoi.php");
 										$conn3 = $conn;
 date_default_timezone_set("Asia/Bangkok"); // Thiết lập múi giờ chuẩn
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -28,8 +28,6 @@ if (isset($_POST['submit'])) {
   $mota = $_POST['mota'];
   $soluong = $_POST['soluong'];
   $iddanhmuc = $_POST['iddanhmuc'];
-include("ketnoi.php");
-										$conn3 = $conn;
   $sql= "INSERT INTO sanpham (tensp, giasp, mota,hinhanh,soluong,iddanhmuc) VALUES ('$tensp',  $giasp, '$mota','$hinhanh',$soluong,$iddanhmuc)";
   $ketqua = mysqli_query($conn, $sql);
   }}
@@ -138,7 +136,7 @@ include("ketnoi.php");
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
 										$conn3 = $conn;
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
@@ -229,7 +227,7 @@ include("ketnoi.php");
     <td>
   <select name="iddanhmuc">
 			<?php 
-				include("ketnoi.php");
+				include("../ketnoi.php");
 										$conn2 = $conn;
 				$sql2= "SELECT * FROM danhmuc";
 				$ketqua2 = mysqli_query($conn2, $sql2);
