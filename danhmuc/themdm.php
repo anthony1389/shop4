@@ -4,7 +4,7 @@ session_start();
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$tendanhmuc = $_POST['tendanhmuc'];
-include("ketnoi.php");
+include("../ketnoi.php");
 										$conn3 = $conn;
 			$sql= "INSERT INTO danhmuc (tendanhmuc) VALUES ('$tendanhmuc')";
 			$ketqua = mysqli_query($conn, $sql);
@@ -113,7 +113,7 @@ include("ketnoi.php");
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
 										$conn3 = $conn;
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
