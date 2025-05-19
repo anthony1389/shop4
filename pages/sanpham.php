@@ -5,7 +5,7 @@ if (!isset($_SESSION['username'])) {
 ?><?php
     
     $id = $_GET['id'];
-   include("ketnoi.php");
+   include("../ketnoi.php");
 	$conn3 = $conn;
     $sql= "SELECT * FROM sanpham where id = $id";
     $ketqua = mysqli_query($conn, $sql);
@@ -122,7 +122,7 @@ if (!isset($_SESSION['username'])) {
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
 										$conn3 = $conn;
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
@@ -138,7 +138,7 @@ if (!isset($_SESSION['username'])) {
 							<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
 										$conn3 = $conn;
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
@@ -339,7 +339,7 @@ if (!isset($_SESSION['username'])) {
 						<div class="product-detail-appreciation-content-row">
 							<div id="dsbinhluan">
 				<?php
-            include("ketnoi.php");
+            include("../ketnoi.php");
 										$conn7 = $conn;
             $sql7 ="SELECT * FROM binhluan WHERE idsp=".$_GET['id'];
             $ketqua7 = mysqli_query($conn7,$sql7);
@@ -387,7 +387,7 @@ if (!isset($_SESSION['username'])) {
 	<?php 
         // PHẦN XỬ LÝ PHP
         // BƯỚC 1: KẾT NỐI CSDL
-        $include("ketnoi.php");
+        include("../ketnoi.php");
 		$conn3 = $conn;
  
         // BƯỚC 2: TÌM TỔNG SỐ RECORDS
