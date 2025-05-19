@@ -101,7 +101,8 @@ session_start();
 						<ul class="navbar-category-list">
 						<li class="navbar-category-item">
 							<?php
-										$conn3 = mysqli_connect("localhost", "root", "", "dacs2");
+										include("ketnoi.php");
+										$conn3 = $conn;
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
 										while($row3=mysqli_fetch_array($ketqua3)){
@@ -116,7 +117,8 @@ session_start();
 							<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn3 = mysqli_connect("localhost", "root", "", "dacs2");
+										include("ketnoi.php");
+										$conn3 = $conn;
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
 										while($row3=mysqli_fetch_array($ketqua3)){
