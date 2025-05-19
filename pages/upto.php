@@ -99,7 +99,7 @@ session_start();
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
 										$conn3 = $conn;
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
@@ -183,7 +183,7 @@ session_start();
 							<ul class="category-list">
 								<li class="category-item category-item--active">
 								<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
 										$conn3 = $conn;
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
@@ -234,7 +234,7 @@ session_start();
 						
                   
 		<?php
-			include("ketnoi.php");
+			include("../ketnoi.php");
 										$conn3 = $conn;
 			$sql= "SELECT * FROM sanpham ORDER BY giasp ASC";
 			$ketqua = mysqli_query($conn, $sql);
