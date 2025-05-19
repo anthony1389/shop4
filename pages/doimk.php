@@ -3,7 +3,7 @@ session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$password = $_POST['password'];
-include("ketnoi.php");
+include("../ketnoi.php");
 										$conn3 = $conn;
 	$sql = "UPDATE taikhoan SET password='$password' WHERE id=".$_GET['id'];
 	$ketqua2 = mysqli_query($conn, $sql);
@@ -112,7 +112,7 @@ include("ketnoi.php");
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
 										$conn3 = $conn;
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
@@ -175,7 +175,7 @@ include("ketnoi.php");
 					<div class="product-detail-describe__detail">  
                     <h1>Đổi mật khẩu</h1>
 	<?php
-		include("ketnoi.php");
+		include("../ketnoi.php");
 										$conn3 = $conn;
 		$sql2 = "SELECT * FROM taikhoan where id=".$_GET['id'];
 		$ketqua = mysqli_query($conn2, $sql2);
