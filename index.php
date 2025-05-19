@@ -105,12 +105,8 @@ if (!isset($_SESSION['username'])) {
 							<li class="navbar-category-item">
 							<?php
 										 // ✅ Kết nối MySQL
-        $servername = "datashop.mysql.database.azure.com";
-$username = "sqladmin@datashop";
-$password = "phong218.";
-$dbname = "dacs2";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+include("ketnoi.php");
+										$conn3 = $conn;
 
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
@@ -127,13 +123,8 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 							<li class="navbar-category-item">
 							<?php
 										 // ✅ Kết nối MySQL
-        $servername = "datashop.mysql.database.azure.com";
-$username = "sqladmin";
-$password = "phong218.";
-$dbname = "dacs2";
-
-$conn3 = mysqli_connect($servername, $username, $password, $dbname);
-
+include("ketnoi.php");
+										$conn3 = $conn;
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
 										while($row3=mysqli_fetch_array($ketqua3)){
@@ -221,12 +212,8 @@ $conn3 = mysqli_connect($servername, $username, $password, $dbname);
 									
 									<?php
 										 // ✅ Kết nối MySQL
-        $servername = "datashop.mysql.database.azure.com";
-$username = "sqladmin@datashop";
-$password = "phong218.";
-$dbname = "dacs2";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+include("ketnoi.php");
+										$conn3 = $conn;
 
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
@@ -268,12 +255,8 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
         // PHẦN XỬ LÝ PHP
         // BƯỚC 1: KẾT NỐI CSDL
          // ✅ Kết nối MySQL
-        $servername = "datashop.mysql.database.azure.com";
-$username = "sqladmin@datashop";
-$password = "phong218.";
-$dbname = "dacs2";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+include("ketnoi.php");
+										$conn3 = $conn;
 
         // BƯỚC 2: TÌM TỔNG SỐ RECORDS
         $result = mysqli_query($conn, 'select count(id) as total from sanpham');
