@@ -5,7 +5,7 @@ if (!isset($_SESSION['username'])) {
     
 }
 ?><?php
-include("ketnoi.php");
+include("../ketnoi.php");
 		$conn3 = $conn;
     $noidung = $_POST['noidung'];
     $username = $_SESSION['username'];
