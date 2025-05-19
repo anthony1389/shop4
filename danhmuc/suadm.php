@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("ketnoi.php");
+include("../ketnoi.php");
 	$conn3 = $conn;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
 										$conn3 = $conn;
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
@@ -175,7 +175,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<div class="product-detail-describe__detail">  
                     <h1>Sửa danh mục</h1>
 	<?php
-		$conn2 = mysqli_connect("localhost", "root", "", "dacs2");
+		include("../ketnoi.php");
+$conn2 = $conn;
 		$sql2 = "SELECT * FROM danhmuc where id=".$_GET['id'];
 		$ketqua = mysqli_query($conn2, $sql2);
 		$thongtinsv = mysqli_fetch_array($ketqua);
