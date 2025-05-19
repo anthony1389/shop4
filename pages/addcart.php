@@ -10,7 +10,7 @@
 </head>
 <body>
 <?php
-        include("ketnoi.php");
+        include("../ketnoi.php");
 										$conn3 = $conn;
         $sql ="select * from sanpham ";
         $query=mysqli_query($conn,$sql);
