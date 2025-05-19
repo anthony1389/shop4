@@ -105,7 +105,8 @@ if (!isset($_SESSION['username'])) {
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn = mysqli_connect("localhost", "root", "", "dacs2");
+										include("ketnoi.php");
+										$conn3 = $conn;
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
 										while($row=mysqli_fetch_array($ketqua)){
@@ -265,7 +266,8 @@ if (!isset($_SESSION['username'])) {
     <tbody>
 		<?php
 			
-			$conn =	mysqli_connect("localhost", "root", "", "dacs2");
+			include("ketnoi.php");
+			$conn3 = $conn;
 			$sql= "SELECT * FROM taikhoan ";
 			$ketqua = mysqli_query($conn, $sql);
 			$stt = 1;
