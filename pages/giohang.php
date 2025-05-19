@@ -186,7 +186,8 @@ if(isset($_POST['submit']))
 								$item[]=$key;
 							}
 							$str=implode(",",$item);
-							$conn = mysqli_connect("localhost", "root", "", "dacs2");
+							include("ketnoi.php");
+										$conn3 = $conn;
 							$sql ="SELECT * from sanpham where id in ($str)";
 							$query=mysqli_query($conn,$sql);
 							while($row=mysqli_fetch_array($query))
