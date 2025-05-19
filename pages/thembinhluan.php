@@ -5,6 +5,8 @@ if (!isset($_SESSION['username'])) {
     
 }
 ?><?php
+include("ketnoi.php");
+		$conn3 = $conn;
     $noidung = $_POST['noidung'];
     $username = $_SESSION['username'];
     $idsp = $_POST['idsp'];
@@ -12,7 +14,6 @@ if (!isset($_SESSION['username'])) {
     
     echo $noidung.'-'.$username.'-'.$idsp;
 
-    $conn = mysqli_connect("localhost", "root", "", "dacs2");
     $sql = "INSERT INTO binhluan( noidung, username, idsp) VALUES ('$noidung','$username',$idsp)";
     $ketqua = mysqli_query($conn, $sql);
     echo $sql;
