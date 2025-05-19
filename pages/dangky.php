@@ -25,7 +25,7 @@
 				   echo "bạn vui lòng nhập đầy đủ thông tin";
   			}else{
   					// Kiểm tra tài khoản đã tồn tại chưa
-					include("ketnoi.php");
+					include("../ketnoi.php");
 										$conn3 = $conn;
   					$sql="SELECT * from taikhoan where username='$username'";
 					$kt=mysqli_query($conn, $sql);
