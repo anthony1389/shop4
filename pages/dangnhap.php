@@ -26,9 +26,7 @@ if (isset($_POST["btn_submit"])) {
     } else {
         // ✅ Kết nối MySQL
 include("../ketnoi.php");
-
 										$conn3 = $conn;
-
         // ✅ Kiểm tra kết nối
         if (!$conn) {
             die("<p>Kết nối thất bại: " . mysqli_connect_error() . "</p>");
