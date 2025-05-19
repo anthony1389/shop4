@@ -100,7 +100,8 @@ session_start();
 						<ul class="navbar-category-list">
 						<li class="navbar-category-item">
 							<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
+
 										$conn3 = $conn;
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
@@ -116,7 +117,8 @@ session_start();
 							<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
+
 										$conn3 = $conn;
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
@@ -203,7 +205,8 @@ session_start();
 							<ul class="category-list">
 							<li class="navbar-category-item">
 							<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
+
 										$conn3 = $conn;
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
@@ -219,7 +222,8 @@ session_start();
 							<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
+
 										$conn3 = $conn;
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
@@ -275,7 +279,8 @@ session_start();
                         if(isset($_POST['s']))
                         {
                             $s= $_POST['s'];
-							include("ketnoi.php");
+							include("../ketnoi.php");
+
 							$sql = "SELECT * From sanpham WHERE tensp LIKE '%$s%'";
 							$ketqua = mysqli_query($conn,$sql);
                            
