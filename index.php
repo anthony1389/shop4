@@ -128,11 +128,11 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 							<?php
 										 // ✅ Kết nối MySQL
         $servername = "datashop.mysql.database.azure.com";
-$username = "sqladmin@datashop";
+$username = "sqladmin";
 $password = "phong218.";
 $dbname = "dacs2";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn3 = mysqli_connect($servername, $username, $password, $dbname);
 
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
