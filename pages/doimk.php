@@ -3,9 +3,8 @@ session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$password = $_POST['password'];
-
-
-	$conn =	mysqli_connect("localhost", "root", "", "dacs2");
+include("ketnoi.php");
+										$conn3 = $conn;
 	$sql = "UPDATE taikhoan SET password='$password' WHERE id=".$_GET['id'];
 	$ketqua2 = mysqli_query($conn, $sql);
 	mysqli_close($conn);
@@ -113,7 +112,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn = mysqli_connect("localhost", "root", "", "dacs2");
+										include("ketnoi.php");
+										$conn3 = $conn;
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
 										while($row=mysqli_fetch_array($ketqua)){
@@ -175,7 +175,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<div class="product-detail-describe__detail">  
                     <h1>Đổi mật khẩu</h1>
 	<?php
-		$conn2 = mysqli_connect("localhost", "root", "", "dacs2");
+		include("ketnoi.php");
+										$conn3 = $conn;
 		$sql2 = "SELECT * FROM taikhoan where id=".$_GET['id'];
 		$ketqua = mysqli_query($conn2, $sql2);
 		$thongtinsv = mysqli_fetch_array($ketqua);
