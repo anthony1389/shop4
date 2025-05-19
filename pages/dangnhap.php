@@ -25,7 +25,8 @@ if (isset($_POST["btn_submit"])) {
         echo "<p>Username hoặc password bạn không được để trống!</p>";
     } else {
         // ✅ Kết nối MySQL
-include("ketnoi.php");
+include("../ketnoi.php");
+
 										$conn3 = $conn;
 
         // ✅ Kiểm tra kết nối
