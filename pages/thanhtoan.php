@@ -101,7 +101,7 @@ session_start();
 						<ul class="navbar-category-list">
 						<li class="navbar-category-item">
 							<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
 										$conn3 = $conn;
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
@@ -117,7 +117,7 @@ session_start();
 							<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										include("ketnoi.php");
+										include("../ketnoi.php");
 										$conn3 = $conn;
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
@@ -159,7 +159,7 @@ session_start();
     <?php
         $ngaymua = date('Y-m-d');
 
-include("ketnoi.php");
+include("../ketnoi.php");
 	$conn3 = $conn;
         $sql ="INSERT INTO donhang(iduser,tongtien,trangthai,ngaymua,diachi) VALUES( $_SESSION[id], $_SESSION[total], 'Đã thanh toán','$ngaymua','$_SESSION[diachi]')";
         $ketqua=mysqli_query($conn,$sql);
